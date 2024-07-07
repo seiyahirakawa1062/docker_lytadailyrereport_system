@@ -3,8 +3,8 @@ FROM ubuntu:22.04
 
 # 1. command_tutorialディレクトリをルートディレクトリに作成して
 #    そのなかにfirstvi.txtを作成
-RUN mkdir /docker_lytadailyrereport_system
-RUN touch /docker_lytadailyrereport_system/firstvi.txt
+RUN mkdir /command_tutorial
+RUN touch /command_tutorial/firstvi.txt
 
 # 2. viのインストール
 RUN apt update

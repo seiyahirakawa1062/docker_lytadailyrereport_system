@@ -3,8 +3,8 @@ FROM ubuntu:22.04
 
 # 1. command_tutorialディレクトリをルートディレクトリに作成して
 #    そのなかにfirstvi.txtを作成
-RUN mkdir /docker_lytadailyrereport_system
-RUN touch /docker_lytadailyrereport_system/firstvi.txt
+RUN mkdir /command_tutorial
+RUN touch /command_tutorial/firstvi.txt
 
 # 2. viのインストール
 RUN apt update
@@ -48,8 +48,3 @@ RUN echo "ProxyPass / ajp://localhost:8009/" >> /etc/apache2/apache2.conf
 RUN apt -y install sudo
 RUN useradd -s /bin/bash -G sudo -m repuser
 RUN echo "repuser:reppass" | chpasswd
-
-# 8. 起動時コマンドの指定
-COPY startup.sh /startup.sh
-RUN chmod 744 /startup.sh
-CMD /startup.sh
